@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-export default class About extends Component {
+export default class FAQ extends Component {
   constructor(props) {
     super(props)
   }
   
   render() {
     return (
-      <div className='about'>
-        This is About page.
+      <div className='faq'>
+        This is FAQ page.
       </div>
     )
   }

@@ -9,6 +9,7 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 export default class Header extends Component {
   constructor(props) {
@@ -37,13 +38,19 @@ export default class Header extends Component {
       <div>
         <List>
           <ListItem button>
-            <ListItemText primary="Home" />
+            <Link to='/'>
+              <ListItemText primary="Home" />          
+            </Link>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="About" />
+            <Link to='/about'>
+              <ListItemText primary="About" />
+            </Link>
           </ListItem>
           <ListItem button>
-            <ListItemText primary="FAQ" />
+            <Link to='/FAQ'>
+              <ListItemText primary="FAQ" />
+            </Link>
           </ListItem>           
         </List>
       </div>
@@ -51,7 +58,7 @@ export default class Header extends Component {
 
     return (
       <div className='header'>
-        <AppBar position='static'>
+        <AppBar position='static' color='inherit'>
           <Toolbar>
             <IconButton onClick={this.toggleDrawer}>
               <MenuIcon />
