@@ -9,7 +9,7 @@ export default class BottomArea extends Component {
   render() {
     return (
       <div className='bottomArea'>
-
+        This is bottomArea.
       </div>
     )
   }

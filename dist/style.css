@@ -29,14 +29,10 @@ body {
 
 .footer {
   background-color: white;
-  top: 800px;
+  top: 850px;
   height: 50px;
   padding: 5px 0 0 5px;
 }
-
-/* .material-icons {
-  font-size: 9px;
-} */
 
 .material-icons {
   font-family: 'Material Icons';
@@ -65,4 +61,10 @@ body {
 
 .material-icons.md-9 { 
   font-size: 9px; 
+}
+
+.bottomArea {
+  background-color:rgba(239, 240, 242);
+  top: 800px;
+  height: 200px;
 }
