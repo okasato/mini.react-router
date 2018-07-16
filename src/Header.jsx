@@ -43,15 +43,26 @@ export default class Header extends Component {
             </Link>
           </ListItem>
           <ListItem button>
-            <Link to='/about'>
-              <ListItemText primary="About" />
+            <Link to='/ourservices'>
+              <ListItemText primary="Our Services" />
+            </Link>
+          </ListItem>
+          <ListItem button>
+            <Link to='/aboutus'>
+              <ListItemText primary="About Us" />
             </Link>
           </ListItem>
           <ListItem button>
             <Link to='/FAQ'>
               <ListItemText primary="FAQ" />
             </Link>
-          </ListItem>           
+          </ListItem>
+          <ListItem button>
+            <Link to='/contactus'>
+              <ListItemText primary="Contact Us" />
+            </Link>
+          </ListItem>
+           
         </List>
       </div>
     );

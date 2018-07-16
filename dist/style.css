@@ -27,6 +27,24 @@ body {
   height: 1000px;
 }
 
+.about {
+  background: linear-gradient(-45deg, rgba(255, 95, 109, .8), rgba(255, 195, 113, .8)) fixed, url(mom-and-baby-yoga.jpg) fixed;
+  background-size: cover;
+  height: 1000px;
+}
+
+.contact {
+  background: linear-gradient(-45deg, rgba(48, 67, 82, .8), rgba(215, 210, 204, .8)) fixed, url(mom-and-baby-yoga.jpg) fixed;
+  background-size: cover;
+  height: 1000px;
+}
+
+.services {
+  background: linear-gradient(-45deg, rgba(238, 156, 167, .8), rgba(255, 221, 225, .8)) fixed, url(mom-and-baby-yoga.jpg) fixed;
+  background-size: cover;
+  height: 1000px;
+}
+
 .footer {
   background-color: white;
   top: 850px;
