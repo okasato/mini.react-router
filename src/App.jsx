@@ -8,6 +8,7 @@ import FAQ from './FAQ';
 import Header from './Header';
 import Footer from './Footer';
 import BottomArea from './BottomArea';
+import Schedule from './Schedule';
 
 export default class App extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ export default class App extends Component {
         <Route path='/aboutus' component={AboutUs} />
         <Route path='/contactus' component={ContactUs} />
         <Route path='/ourservices' component={OurServices} />
+        <Route path='/schedule' component={Schedule} />
         <Route path='/faq' component={FAQ} />
         <BottomArea />
         <Footer />

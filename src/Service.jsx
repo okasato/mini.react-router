@@ -16,7 +16,6 @@ export default class Service extends Component {
   }
 
   render() {
-    console.log(this.props.image);
     return (
       <div className='service'>
         <Card className='cards'> 
@@ -46,7 +45,7 @@ export default class Service extends Component {
           <Collapse in={this.props.expanded} timeout="auto" unmountOnExit>
             <CardContent>
               <Typography paragraph variant="body2">
-                Method:
+                Lesson Fee:
               </Typography>
               <Typography paragraph>
                 {this.props.detailedInfo}
