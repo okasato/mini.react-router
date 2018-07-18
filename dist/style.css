@@ -116,3 +116,21 @@ body {
   width: auto;
   padding-top: '56.25%';
 }
+
+.paper {
+  margin: 0px 10px 0px 10px;
+}
+
+.table {
+  min-width: 1000px;
+}
+
+.cell {
+  width: 125px;
+  height: 50px;
+}
+
+.time {
+  width: 200px;
+  height: 50px;
+}
