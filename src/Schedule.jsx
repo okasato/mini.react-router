@@ -6,6 +6,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import Calendar from './Calendar';
 
 let id = 0;
 const createData = (time, mon, tue, wed, thr, fri, sat, sun) => {
@@ -90,6 +91,7 @@ export default class Schedule extends Component {
             </TableBody>
           </Table>
         </Paper>
+        <Calendar />
       </div>
     )
   }

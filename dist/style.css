@@ -134,3 +134,116 @@ body {
   width: 200px;
   height: 50px;
 }
+
+.calendar {
+  text-align: center
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.previous {
+  order: 1;
+  position: relative;
+  height: 20px;
+  padding: 5px 20px 5px 20px;
+}
+
+.previous:hover {
+  background-color: grey;
+  color: white;
+}
+
+.next {
+  order: 3;
+  position: relative;
+  height: 20px;
+  padding: 5px 20px 5px 20px;
+}
+
+.next:hover {
+  background-color: grey;
+  color: white;
+}
+
+.calendarHeader {
+  order: 2;
+}
+
+#header-position {
+  display: flex;
+  width: 300px;
+  height: 20px;
+  padding: 5px 0px 5px 0px;
+  position: relative;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+#header-position:hover {
+  background-color: grey;
+  color: white;
+}
+
+.header-month {
+  position: relative;
+  width: 150px;
+  text-align: right;
+}
+
+.header-year {
+  position: relative;
+  width: 140px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.header-only-year {
+  position: relative;
+  width: 300px;
+  text-align: center;
+  /* left: 80px; */
+}
+
+table {
+  margin: 0 auto;
+}
+
+td {
+  padding: 5px 15px 5px 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+th {
+  padding: 5px 15px 5px 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+
+.day:hover {
+  background-color: blue;
+  color: white
+}
+
+.month {
+  width: 100px;
+}
+
+.month:hover {
+  background-color: blue;
+  color: white
+}
+
+.holidays {
+  color: red;
+}
+
+.today {
+  background-color: gray;
+  color: white
+}
+
+.thisMonth {
+  background-color: gray;
+  color: white
+}
