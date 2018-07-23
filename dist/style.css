@@ -128,16 +128,16 @@ body {
 }
 
 .table {
-  min-width: 1000px;
+  /* width: 120%; */
 }
 
 .cell {
-  width: 125px;
+  width: 12%;
   height: 50px;
 }
 
 .time {
-  width: 200px;
+  width: 15%;
   height: 50px;
 }
 
