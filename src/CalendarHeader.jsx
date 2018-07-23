@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import TableCell from '@material-ui/core/TableCell';
+import Typography from '@material-ui/core/Typography/Typography';
 
 export default class CalendarHeader extends Component {
   constructor(props) {
@@ -40,7 +42,7 @@ export default class CalendarHeader extends Component {
     } else {
       return (
         <div id='header-position'>
-          <div className='header-month'>{this.getNameOfMonth(this.props.month)}</div>
+          <div className='header-month' numeric>{this.getNameOfMonth(this.props.month)}</div>
           <div className='header-year'>{this.props.year}</div>
         </div>
       )
@@ -49,11 +51,9 @@ export default class CalendarHeader extends Component {
 
   render() {
     return (
-      <div className='calendarHeader'>
-        <div onClick={this.handleClickMonths}>
-          {this.currentHeader}
-        </div>
-      </div>
+      <TableCell className='calendarHeader' onClick={this.handleClickMonths}>
+        {this.currentHeader}
+      </TableCell>
     )
   }
 }

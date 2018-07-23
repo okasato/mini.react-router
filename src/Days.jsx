@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
 export default class Days extends Component {
   constructor(props) {
@@ -27,53 +33,55 @@ export default class Days extends Component {
     const dayOfWeeks = ['SUN', 'MON', 'TUE', 'WED', 'THR', 'FRI', 'SAT'];
 
     return (
-      <table>
-        <thead>
-          <tr>
+      <Table>
+        <TableHead>
+          <TableRow>
             {dayOfWeeks.map((dayOfWeek, index) => {
               if (index === 0 || index === 6) {
                 return (
-                  <th className='holidays'>{dayOfWeek}</th>                  
+                  <TableCell className='holidays' numeric>{dayOfWeek}</TableCell>                  
                 )
               } else {
                 return (
-                  <th>{dayOfWeek}</th>
+                  <TableCell numeric>{dayOfWeek}</TableCell>
                 )
               }
             })}
-          </tr>
-        </thead>
-        <tbody>
+          </TableRow>
+        </TableHead>
+        <TableBody>
           {table.map(line => {
             return (
-              <tr>
+              <TableRow>
                 {line.map((day, index) => {
                   if (index === 0 || index === 6) {
                     return (
-                      <td className='day holidays'>{day}</td>
+                      <TableCell className='day holidays' numeric>{day}</TableCell>
                     )
                   } else if (year === new Date().getFullYear() && month === new Date().getMonth() && day === new Date().getDate()) {
                     return (
-                      <td className='day today'>{day}</td>
+                      <TableCell className='day today' numeric>{day}</TableCell>
                     )
                   } else{
                     return (
-                      <td className='day'>{day}</td>
+                      <TableCell className='day' numeric>{day}</TableCell>
                     )
                   }
                 })}
-              </tr>
+              </TableRow>
             )
           })}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
     );
   }
 
   render() {
     return (
       <div className='days'>
-        {this.createTable(this.props.year, this.props.month)}
+        <Paper>
+          {this.createTable(this.props.year, this.props.month)}
+        </Paper>
       </div>
     )
   }

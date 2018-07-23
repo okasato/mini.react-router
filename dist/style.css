@@ -174,8 +174,8 @@ body {
 
 #header-position {
   display: flex;
-  width: 300px;
-  height: 20px;
+  /* width: 300px; */
+  /* height: 20px; */
   padding: 5px 0px 5px 0px;
   position: relative;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
@@ -188,22 +188,22 @@ body {
 
 .header-month {
   position: relative;
-  width: 150px;
+  /* width: 150px; */
   text-align: right;
+  margin-left: 40%;
 }
 
 .header-year {
   position: relative;
-  width: 140px;
+  /* width: 140px; */
   text-align: left;
   margin-left: 10px;
 }
 
 .header-only-year {
   position: relative;
-  width: 300px;
+  /* width: 300px; */
   text-align: center;
-  /* left: 80px; */
 }
 
 table {

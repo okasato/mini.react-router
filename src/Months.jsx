@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 export default class Months extends Component{
   constructor(props){
@@ -35,30 +42,30 @@ export default class Months extends Component{
   render(){
     return (
       <div className='months'>
-        <table>
-          <thead>
-            <tr></tr>
-          </thead>
-          <tbody>
+        <Table>
+          <TableHead>
+            <TableRow></TableRow>
+          </TableHead>
+          <TableBody>
             {this.props.arrayOfMonths.map(months => {
               return (
-                <tr>
+                <TableRow>
                   {months.map(month => {
                     if (this.props.year === new Date().getFullYear() && this.getNumberOfMonth(month) === new Date().getMonth()) {
                       return (                      
-                        <td className='month thisMonth' onClick={this.handleClickMonth}>{month}</td>
+                        <TableCell className='month thisMonth' onClick={this.handleClickMonth}>{month}</TableCell>
                       )
                     } else {
                       return (                      
-                        <td className='month' onClick={this.handleClickMonth}>{month}</td>
+                        <TableCell className='month' onClick={this.handleClickMonth}>{month}</TableCell>
                       )
                     }
                   })}
-                </tr>
+                </TableRow>
               )
             })}
-          </tbody>
-        </table>
+          </TableBody>
+        </Table>
       </div>
     )
   }
