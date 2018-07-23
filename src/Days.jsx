@@ -54,18 +54,34 @@ export default class Days extends Component {
             return (
               <TableRow>
                 {line.map((day, index) => {
-                  if (index === 0 || index === 6) {
-                    return (
-                      <TableCell className='day holidays' numeric>{day}</TableCell>
-                    )
-                  } else if (year === new Date().getFullYear() && month === new Date().getMonth() && day === new Date().getDate()) {
-                    return (
-                      <TableCell className='day today' numeric>{day}</TableCell>
-                    )
-                  } else{
-                    return (
-                      <TableCell className='day' numeric>{day}</TableCell>
-                    )
+                  if (year === new Date().getFullYear() && month === new Date().getMonth() && day === new Date().getDate()) {
+                    if (index === 0 || index === 6) {
+                      return (
+                        <TableCell className='today chosenDay' numeric>
+                          <div className='holidays'>{day}</div>
+                        </TableCell>
+                      )
+                    } else {
+                      return (
+                        <TableCell className='today chosenDay' numeric>
+                          <div>{day}</div>
+                        </TableCell>
+                      )
+                    }
+                  } else {
+                    if (index === 0 || index === 6) {
+                      return (
+                        <TableCell className='chosenDay' numeric>
+                          <div className='holidays'>{day}</div>
+                        </TableCell>
+                      )
+                    } else {
+                      return (
+                        <TableCell className='chosenDay' numeric>
+                          <div>{day}</div>
+                        </TableCell>
+                      )
+                    }
                   }
                 })}
               </TableRow>

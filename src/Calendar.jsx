@@ -108,7 +108,7 @@ export default class Calendar extends Component {
   render() {
     return (
       <div className='calendar'>
-        <Paper>
+        <Paper className='calendar-paper'>
           <Table>
             <TableHead>
               <TableRow className='top'>

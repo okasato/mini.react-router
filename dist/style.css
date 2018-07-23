@@ -51,6 +51,12 @@ body {
   height: 2000px;
 }
 
+.schedule {
+  background: linear-gradient(-45deg, rgba(44, 62, 80, .8), rgba(76, 161, 175, .8)) fixed, url(mom-and-baby-yoga.jpg) fixed;
+  background-size: cover;
+  height: 2000px;
+}
+
 .footer {
   background-color: white;
   top: 850px;
@@ -172,6 +178,11 @@ body {
   order: 2;
 }
 
+.calendarHeader:hover {
+  background-color: grey;
+  color: white;
+}
+
 #header-position {
   display: flex;
   /* width: 300px; */
@@ -181,29 +192,30 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 }
 
-#header-position:hover {
+/* #header-position:hover {
   background-color: grey;
   color: white;
-}
+} */
 
 .header-month {
   position: relative;
   /* width: 150px; */
-  text-align: right;
+  /* text-align: right; */
   margin-left: 40%;
 }
 
 .header-year {
   position: relative;
   /* width: 140px; */
-  text-align: left;
+  /* text-align: left; */
   margin-left: 10px;
 }
 
 .header-only-year {
   position: relative;
   /* width: 300px; */
-  text-align: center;
+  /* text-align: center; */
+  margin-left: 45%;
 }
 
 table {
@@ -220,19 +232,30 @@ th {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 }
 
-.day:hover {
+/* .day:hover {
+  background-color: blue;
+  color: white
+} */
+
+.chosenDay:hover {
   background-color: blue;
   color: white
 }
 
 .month {
   width: 100px;
+  margin-left: 45%;
 }
 
-.month:hover {
+.month-tableCell:hover {
   background-color: blue;
   color: white
-}
+} 
+
+/* .month:hover {
+  background-color: blue;
+  color: white
+} */
 
 .holidays {
   color: red;
@@ -246,4 +269,8 @@ th {
 .thisMonth {
   background-color: gray;
   color: white
+}
+
+.calendar-paper {
+  margin: 0px 10px 0px 10px;
 }

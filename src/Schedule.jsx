@@ -27,6 +27,9 @@ export default class Schedule extends Component {
   render() {
     return (
       <div className='schedule'>
+        <Typography className='headline' variant='display1' gutterBottom>
+          Schedule
+        </Typography>
         <Paper className='paper'>
           <Table className='table'>
             <TableHead>
@@ -91,6 +94,9 @@ export default class Schedule extends Component {
             </TableBody>
           </Table>
         </Paper>
+        <Typography className='headline' variant='display1' gutterBottom>
+          Calendar
+        </Typography>
         <Calendar />
       </div>
     )
