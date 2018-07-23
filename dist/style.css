@@ -8,6 +8,7 @@ li {
 
 .header {
   flex-grow: 1;
+  min-width: 100%;
 }
 
 body {
@@ -97,6 +98,7 @@ body {
   background-color:rgba(239, 240, 242);
   top: 800px;
   height: 200px;
+  min-width: 100%;
 }
 
 .cards {
@@ -128,16 +130,16 @@ body {
 }
 
 .table {
-  /* width: 120%; */
+  width: auto;
 }
 
 .cell {
-  width: 12%;
+  width: 40%;
   height: 50px;
 }
 
 .time {
-  width: 15%;
+  width: 20%;
   height: 50px;
 }
 

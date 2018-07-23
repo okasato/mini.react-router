@@ -7,6 +7,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Calendar from './Calendar';
+import TimeTable from './TimeTable';
 
 let id = 0;
 const createData = (time, mon, tue, wed, thr, fri, sat, sun) => {
@@ -16,7 +17,7 @@ const createData = (time, mon, tue, wed, thr, fri, sat, sun) => {
 
 const data = [
   createData('10:00am - 12:00pm', 'Maternity Hula', 'Start at 11am.\nBaby Massage', '', '', 'Maternity Yoga', 'Maternity Yoga', ''),
-  createData('12:15pm - 2:15pm', '', '', '', '', 'Mother Coaching', '', '')
+  createData('12:15pm - 02:15pm', '', '', '', '', 'Mother Coaching', '', '')
 ];
 
 export default class Schedule extends Component {
@@ -28,9 +29,9 @@ export default class Schedule extends Component {
     return (
       <div className='schedule'>
         <Typography className='headline' variant='display1' gutterBottom>
-          Schedule
+          Time Table
         </Typography>
-        <Paper className='paper'>
+        {/* <Paper className='paper'>
           <Table className='table'>
             <TableHead>
               <TableRow>
@@ -93,7 +94,8 @@ export default class Schedule extends Component {
               })}
             </TableBody>
           </Table>
-        </Paper>
+        </Paper> */}
+        <TimeTable />
         <Typography className='headline' variant='display1' gutterBottom>
           Calendar
         </Typography>
