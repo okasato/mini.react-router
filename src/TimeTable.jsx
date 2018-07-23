@@ -64,8 +64,7 @@ export default class TimeTable extends Component {
               })}
             </TableBody>
           </Table>
-        </
-        Paper>
+        </Paper>
       </div>
     )
   }
