@@ -280,3 +280,8 @@ th {
 .clear {
   left: 80%;
 }
+
+.overlay {
+  background-color: gray;
+  opacity: 0.3;
+}

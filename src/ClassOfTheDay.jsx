@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import Typography from '@material-ui/core/Typography/Typography';
-import Button from '@material-ui/core/Button';
 import Icon from "@material-ui/core/Icon";
 import IconButton from "@material-ui/core/IconButton";
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 
 const customStyles = {
   content: {
-    top: '50%',
+    top: '120%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
   }
 };
 
@@ -22,7 +26,6 @@ export default class ClassOfTheDay extends Component {
   }
 
   render() {
-    console.log(this.props.classOfTheDay);
     return (
       <div className='classOfTheDay'>
         <Modal
@@ -30,6 +33,7 @@ export default class ClassOfTheDay extends Component {
           onAfterOpen={this.props.onAfterOpen}
           onRequestClose={this.props.onRequestClose}
           style={customStyles}
+          overlayClassName="Overlay"
         >
           <IconButton className='clear' onClick={this.props.onRequestClose}>
             <Icon>clear</Icon>
@@ -37,7 +41,12 @@ export default class ClassOfTheDay extends Component {
           <Typography variant="display1" gutterBottom>
             Class Of the day
           </Typography>
-          <Typography>{this.props.classOfTheDay}</Typography>
+          <Divider />
+          <List component="nav">
+            <ListItem button>
+              <ListItemText primary={this.props.classOfTheDay} />
+            </ListItem>
+          </List>
         </Modal>
       </div>
     )
