@@ -276,3 +276,7 @@ th {
 .calendar-paper {
   margin: 0px 10px 0px 10px;
 }
+
+.clear {
+  left: 80%;
+}

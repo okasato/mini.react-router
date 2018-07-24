@@ -8,6 +8,9 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography/Typography';
 import Button from '@material-ui/core/Button';
+import Icon from "@material-ui/core/Icon";
+import IconButton from "@material-ui/core/IconButton";
+import ClassOfTheDay from './ClassOfTheDay';
 
 const customStyles = {
   content : {
@@ -24,18 +27,33 @@ export default class Days extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      classOfTheDay: 'loading...'
     };
 
     this.createTable = this.createTable.bind(this);
-    this.openModal = this.openModal.bind(this);
+    // this.openModal = this.openModal.bind(this, day);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.getClassInfo = this.getClassInfo.bind(this);
   }
 
-  openModal() {
+  getClassInfo(id) {
+    const classOfTheDay = {
+      22: 'holiday special',
+      24: 'Maternity Hula'
+    };
+
+    return classOfTheDay[id];
+  }
+
+  openModal(day, e) {
+    e.preventDefault();
+    // const classInfo = this.getClassInfo(e.target.innerHTML);
+    const classInfo = this.getClassInfo(day);
     this.setState({
-      modalIsOpen: true
+      modalIsOpen: true,
+      classOfTheDay: classInfo
     });
   }
 
@@ -95,13 +113,13 @@ export default class Days extends Component {
                     if (index === 0 || index === 6) {
                       return (
                         <TableCell className='today chosenDay' numeric>
-                          <div className='holidays' onClick={this.openModal}>{day}</div>
+                          <div className='holidays' onClick={this.openModal.bind(this, day)}>{day}</div>
                         </TableCell>
                       )
                     } else {
                       return (
                         <TableCell className='today chosenDay' numeric>
-                          <div onClick={this.openModal}>{day}</div>
+                          <div onClick={this.openModal.bind(this, day)}>{day}</div>
                         </TableCell>
                       )
                     }
@@ -109,37 +127,25 @@ export default class Days extends Component {
                     if (index === 0 || index === 6) {
                       return (
                         <TableCell className='chosenDay' numeric>
-                          <div className='holidays' onClick={this.openModal}>{day}</div>
-                          {/* <Modal
+                          <div className='holidays' onClick={this.openModal.bind(this, day)}>{day}</div>
+                          <ClassOfTheDay 
                             isOpen={this.state.modalIsOpen}
                             onAfterOpen={this.afterOpenModal}
                             onRequestClose={this.closeModal}
-                            style={customStyles}
-                          >
-                            <Typography variant="display1" gutterBottom>
-                              Class Of the day
-                            </Typography>
-                            <Typography>Holiday class!</Typography>
-                            <Button color='primary' onClick={this.closeModal}>Close</Button>
-                          </Modal> */}
+                            classOfTheDay={this.state.classOfTheDay}
+                          /> 
                         </TableCell>
                       )
                     } else {
                       return (
                         <TableCell className='chosenDay' numeric>
-                          <div onClick={this.openModal}>{day}</div>
-                          <Modal
+                          <div onClick={this.openModal.bind(this, day)}>{day}</div>
+                          <ClassOfTheDay 
                             isOpen={this.state.modalIsOpen}
                             onAfterOpen={this.afterOpenModal}
                             onRequestClose={this.closeModal}
-                            style={customStyles}
-                          >
-                            <Typography variant="display1" gutterBottom>
-                              Class Of the day
-                            </Typography>
-                            <Typography>Maternity Hula</Typography>
-                            <Button color='primary' onClick={this.closeModal}>Close</Button>
-                          </Modal>
+                            classOfTheDay={this.state.classOfTheDay}
+                          /> 
                         </TableCell>
                       )
                     }
