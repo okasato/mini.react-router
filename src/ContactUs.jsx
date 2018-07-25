@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Typography from '@material-ui/core/Typography/Typography';
+import Map from './Map';
+import ContactInfo from './ContactInfo';
 
 export default class ContactUs extends Component {
   constructor(props) {
@@ -8,7 +11,11 @@ export default class ContactUs extends Component {
   render() {
     return (
       <div className='contact'>
-        This is contact us page.
+        <Typography className='contactUs' variant='display1' gutterBottom>Contact us</Typography>
+        <div className='infoContainer'>
+          <Map />
+          <ContactInfo />
+        </div>
       </div>
     )
   }

@@ -285,3 +285,29 @@ th {
   background-color: gray;
   opacity: 0.3;
 }
+
+.contactUs {
+  padding: 10px 0px 0px 20px;
+}
+
+.infoContainer {
+  display: flex;
+}
+
+.map {
+  order: 1;
+  margin-left: 25%;
+}
+
+.mapElement {
+  height: 400px;
+  min-width: 320px;
+}
+
+.contactInfo {
+  order: 2;
+  padding-right: 0%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  max-width: 300px;
+}
