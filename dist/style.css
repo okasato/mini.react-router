@@ -292,6 +292,7 @@ th {
 
 .infoContainer {
   display: flex;
+  margin-top: 10%;
 }
 
 .map {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Typography from '@material-ui/core/Typography/Typography';
 
 export default class AboutUs extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export default class AboutUs extends Component {
   render() {
     return (
       <div className='about'>
-        This is About us page.
+        <Typography className='headline' variant='display1' gutterBottom>About Us</Typography>
       </div>
     )
   }

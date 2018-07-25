@@ -11,7 +11,7 @@ export default class ContactUs extends Component {
   render() {
     return (
       <div className='contact'>
-        <Typography className='contactUs' variant='display1' gutterBottom>Contact us</Typography>
+        <Typography className='headline' variant='display1' gutterBottom>Contact us</Typography>
         <div className='infoContainer'>
           <Map />
           <ContactInfo />
